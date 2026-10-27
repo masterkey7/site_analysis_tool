@@ -1,0 +1,17 @@
+.local/
+node_modules/
+.env
+.env.*
+*.log
+*.pid
+.DS_Store
+Thumbs.db
+coverage/
+test-results/
+data/dynamic-tiles/
+data/tiles/
+data/packages/
+data/raw/
+*.zip
+*.mp4
+*.pdf

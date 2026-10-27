@@ -1,0 +1,7 @@
+let csrf='';
+const status=document.getElementById('settingsStatus');
+const form=document.getElementById('settingsForm');
+const save=document.getElementById('saveConfig');
+try {const r=await fetch('/api/bootstrap');if(!r.ok)throw new Error();const info=await r.json();csrf=info.csrf;document.getElementById('removeConfig').hidden=!info.configured;status.textContent=info.configured?'已保存凭证。填写两项新值可以替换；留空返回可继续使用现有配置。':'尚未连接。请填写 Key 和安全密钥。';}catch{status.textContent='无法连接本机服务，请重新启动后刷新页面。';save.disabled=true;}
+form.addEventListener('submit',async e=>{e.preventDefault();save.disabled=true;status.textContent='正在保存本机配置…';try{const r=await fetch('/api/config',{method:'POST',headers:{'Content-Type':'application/json','X-Atlas-Token':csrf},body:JSON.stringify({key:form.mapKey.value.trim(),securityCode:form.securityCode.value.trim()})});const result=await r.json();if(!r.ok)throw new Error(result.error);form.reset();status.textContent='已保存，正在打开地图…';location.replace('/');}catch(err){status.textContent=err.message||'保存失败，请重试';save.disabled=false;}});
+document.getElementById('removeConfig').onclick=async()=>{if(!confirm('移除本机地图凭证？已保存的场地与标绘会保留。'))return;try{const r=await fetch('/api/config',{method:'DELETE',headers:{'X-Atlas-Token':csrf}});if(!r.ok)throw new Error();form.reset();status.textContent='凭证已移除。';document.getElementById('removeConfig').hidden=true;}catch{status.textContent='移除失败，请刷新后重试。';}};
