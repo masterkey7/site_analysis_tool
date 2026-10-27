@@ -2,13 +2,56 @@
 
 [简体中文](README.md) | English
 
-A local map workspace for early-stage architectural site analysis, primarily for projects in mainland China. Find a reference location, define the actual design site, query important places nearby, refine annotations, and export a single high-resolution analysis diagram.
+**Define a site, organize its surroundings, refine the annotations, and export an architectural analysis diagram.**
 
-This is the English documentation edition. The application interface is currently in Chinese; adding these documents does not translate the UI or place names.
+A local map workspace for early-stage architectural design, primarily for projects in mainland China. Search, city-context analysis, map styles, and manual annotations come together on one page.
 
-## Quick start
+![Hangzhou Olympic Sports Centre context diagram with a moss-green basemap, nearby places, distance rings, and a legend](docs/images/hangzhou-moss.png)
 
-Install Node.js 22 or 24 with npm. You will also need a modern browser and an internet connection. Run these commands from the repository root:
+*Hangzhou Olympic Sports Centre sample · Moss green. Rendered by the current export code from bundled test data, with map attribution retained. Illustrative extents are not surveyed project boundaries.*
+
+<details>
+<summary>See the same site in Light and Dark styles</summary>
+
+| Light linework | Dark linework |
+|---|---|
+| ![Hangzhou light linework](docs/images/hangzhou-light.png) | ![Hangzhou dark linework](docs/images/hangzhou-dark.png) |
+
+The same data and extent, with a different map style. Satellite mode loads imagery online after the user configures the map service; no satellite screenshot is included in this gallery.
+
+</details>
+
+## What you can do
+
+| Feature | How it helps |
+|---|---|
+| Search and confirm the site | Search for an address or nearby school, then pan to the actual parcel and draw its boundary. Set the project name yourself. |
+| Analyze nearby places | Query transport hubs, commercial centers, parks, and public facilities by city and map extent; filter, rank, and arrange their labels. |
+| Choose from four styles | Light linework, Moss green, Dark linework, and grayscale satellite imagery with analysis overlays. |
+| Refine directly on the page | Move or rename labels, hide places, and draw solid or dashed lines, arrows, areas, and text, with undo and redo. |
+| Export one high-resolution diagram | Export the current output frame as PNG or SVG. Default PNG size is 4800 × 3600; editing controls are excluded and map attribution stays visible. |
+| Save and restore projects | Autosave in the current browser, or download and import JSON backups to continue editing. |
+
+## Get started
+
+You need **Node.js 22 or 24 with npm, a modern browser, internet access, and your own AMap (Gaode) Web JS API key with its matching security code**. The app runs on your computer. Its interface is currently in Chinese; this English edition covers documentation.
+
+### 1. Get the project
+
+On the repository page, select **Code → Download ZIP** and extract it, or clone the repository with Git. You do not need to fork it just to run the tool. The repository is currently private; downloading requires an account with access.
+
+### 2. Start the app using either option
+
+**With an AI agent:** open the extracted project folder in an agent that can access local files and a terminal, then ask:
+
+```text
+Read README.en.md, SKILL.en.md, and AGENTS.md in this project.
+Check the runtime, install locked dependencies, run the tests and environment
+checks, then start the local web app. I will enter my map API key and security
+code in the settings page; do not put them in source files or upload them.
+```
+
+**Manually:** open a terminal in the project folder containing package.json and run:
 
 ```sh
 npm ci
@@ -17,20 +60,24 @@ npm run check
 npm start
 ```
 
-Open http://127.0.0.1:4173/ . In **地图配置** (Map settings), enter your own AMap (Gaode) Web JS API key and matching security code. Do not put credentials in source files or commit them to Git.
+Open http://127.0.0.1:4173/ and keep the server terminal running.
 
-Local credentials are stored in `.local/amap.json`, which is excluded from Git. The workspace can open without credentials, but live search, satellite imagery, and nearby-place queries require valid credentials. The server listens on localhost only; this is not a publicly hosted website.
+### 3. Configure the map
 
-## Workflow
+Select **地图配置** (Map settings) in the app and enter your own AMap JS API key and matching security code. They are saved locally in `.local/amap.json`, which is excluded from Git. Do not share credentials in chat, put them in source files, or commit them.
 
-1. Search for a city, address, or nearby landmark such as a school. The search term does not become the project name.
-2. Pan to the actual parcel, draw a rectangle or polygon, explicitly confirm the design boundary, and enter a project name.
-3. Adjust the wider map extent independently, then generate the context analysis. The app queries transport hubs, commercial centers, parks, and public facilities within the city and map extent, then filters, ranks, and arranges their labels.
-4. Choose Light linework, Moss green, Dark linework, or Satellite. Move or edit labels and add solid or dashed lines, arrows, areas, and text.
-5. Export the current output frame as PNG or SVG. The default high-resolution PNG is 4800 × 3600. Map attribution stays in the image; floating controls do not.
-6. Projects are saved in the current browser. Download and import JSON backups to transfer or restore them. There are no user accounts or cloud saves.
+The workspace can open without configuration, but live search, nearby-place queries, and satellite imagery require valid credentials and network access.
 
-## Repository layout
+### 4. Create your first diagram
+
+1. **Find and confirm the design site:** search for a reference location, pan to the real parcel, draw a rectangle or polygon, set the project name, and confirm the boundary. Searching for a school does not make it the project name.
+2. **Set the wider analysis extent:** adjust the map viewport and output aspect ratio independently, then generate the nearby-place analysis.
+3. **Choose a style and refine the layout:** rename or move labels, hide places, and add lines or text as needed.
+4. **Export and save:** export the current frame as PNG or SVG, and download a JSON project backup.
+
+For detailed instructions and acceptance checks, see [Workflow and acceptance](docs/workflow.en.md).
+
+## Code structure and development
 
 ```text
 serve.mjs              Local server, configuration, and map proxy
@@ -42,26 +89,22 @@ tests/                 Automated regression tests
 vendor/                Bundled third-party code and original licenses
 samples/               Hangzhou and Liangzhu test data
 scripts/               Environment and local HTTP checks
-docs/                  Architecture, workflow, validation, and distribution
+docs/                  Guides, architecture, validation, and output examples
 SKILL.md               Agent entry point, with an English companion
 ```
 
-**There is no separate frontend build step. `dist/` is not disposable build output.** The repository includes Hangzhou basemap data for the initial view and regression reproduction. New regions are loaded online for the current viewport.
+**There is no separate frontend build step. dist/ is not disposable build output.** Bundled Hangzhou data supports the initial view and regression reproduction; new regions load online for the current viewport. Before editing, read [Architecture](docs/architecture.en.md) and [AGENTS.md](AGENTS.md).
 
-## Current limitations
+[Agent instructions](SKILL.en.md) · [Validation record](docs/validation.en.md) · [Changelog](CHANGELOG.en.md)
 
-- Automatic identification uses place queries and filtering rules. It does not infer actual land-use boundaries from imagery. Users must confirm the design boundary.
-- Satellite export depends on AMap layers, network access, and browser canvas access. Cross-origin failures and timeouts must be reported; success is not guaranteed in every environment.
-- SVG exports embed the basemap as raster imagery; analysis overlays and hand-drawn annotations are vectors. The entire map is not vector data.
-- Validation currently focuses on Windows and Node 24. Mocked tests do not replace real map and browser acceptance checks.
-- There is no multi-user system, login, billing, visit analytics, or public deployment. This repository is a private source baseline.
+## Current boundaries
 
-## Working with an agent
-
-Ask the agent to read [SKILL.en.md](SKILL.en.md) and [AGENTS.md](AGENTS.md), then install dependencies, run checks, and start the local app. Credentials should be entered in the settings page, not shared in chat. Test data or API calls must not bypass user confirmation of the site.
-
-Further reading: [Workflow and acceptance](docs/workflow.en.md), [Architecture](docs/architecture.en.md), [Validation record](docs/validation.en.md), and [Changelog](CHANGELOG.en.md).
+- Automatic annotations come from place queries and filtering rules, not image-based inference of actual land-use boundaries. Users must confirm the design boundary.
+- Satellite export depends on map layers, the network, and browser access. Cross-origin failures and timeouts are reported; success is not guaranteed in every environment.
+- SVG embeds the basemap as raster imagery; analysis overlays and manual annotations are vectors. The whole map is not vector data.
+- v0.1.0 passed 62 automated tests on Windows / Node 24. This does not replace full acceptance with live map services and a real browser. These gallery renders are not evidence of new live-provider acceptance tests.
+- This is a local tool without accounts, cloud saves, multi-user operation, billing, or visit analytics. Uploading the repository does not publish a hosted web app.
 
 ## Rights and map sources
 
-The original application has not been released under a public open-source license. This repository is for private development. Third-party dependencies, map data, and imagery retain their own terms; see [NOTICE.en.md](NOTICE.en.md) and [Distribution boundaries](docs/distribution.en.md). Uploading the code privately does not establish commercial authorization for map services.
+The original application has not been released under a public open-source license. This repository is for private development. Third-party dependencies, map data, and imagery retain their own terms; see [Third-party notices](NOTICE.en.md) and [Distribution boundaries](docs/distribution.en.md). A private upload does not establish commercial authorization for map services.
