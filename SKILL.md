@@ -5,6 +5,8 @@ description: 运行、维护和复用本仓库的建筑前期场地分析网页�
 
 # 场地分析工具 v0.1
 
+简体中文 | [English](SKILL.en.md)
+
 本 Skill 与可运行应用同仓库，先读取 README.md。将仓库目录作为工作目录，使用 Node.js 22 或 24 和 npm 执行 `npm ci`、`npm test`、`npm run check`，随后 `npm start`，打开 http://127.0.0.1:4173/ 。不要复制其他电脑的 node_modules 或依赖 Codex 私有运行环境。
 
 ## 执行约束

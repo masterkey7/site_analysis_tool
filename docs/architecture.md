@@ -1,5 +1,7 @@
 # 架构与产品约束
 
+简体中文 | [English](architecture.en.md)
+
 ## 文件定位
 
 | 文件 | 职责 |

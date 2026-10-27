@@ -1,5 +1,7 @@
 # v0.1.0 验证记录
 
+简体中文 | [English](validation.en.md)
+
 日期：2026-10-27；环境：Windows，Node v24.19.0。
 
 - 干净发布目录从 npm ci 安装锁定依赖成功。

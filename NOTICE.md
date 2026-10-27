@@ -1,5 +1,7 @@
 # 权利与第三方说明
 
+简体中文 | [English](NOTICE.en.md)
+
 本仓库的原创应用代码未授予公共开源许可。package.json 中的 UNLICENSED 表示未授权公共使用，并不覆盖或撤销第三方权利。
 
 - OpenStreetMap 地理数据库及相关衍生数据：ODbL 1.0，https://www.openstreetmap.org/copyright 。本地底图数据与图片中的相关来源、许可标识保留。
