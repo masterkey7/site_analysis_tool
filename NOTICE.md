@@ -2,6 +2,18 @@
 
 简体中文 | [English](NOTICE.en.md)
 
+## 项目作者与来源
+
+© 2026 masterkey7。项目需求、产品设计、建筑图面判断与迭代由 masterkey7 主导，使用 AI 辅助开发。
+
+- 作者 GitHub：https://github.com/masterkey7
+- 小红书主页：https://xhslink.cn/o/e1lBruaQG5
+- 原始仓库：https://github.com/masterkey7/site_analysis_tool
+- 署名与权利说明：[COPYRIGHT.md](COPYRIGHT.md)
+
+本署名记录项目作者与来源，不把第三方代码、地图数据或影像声明为作者独有，也不授予尚未选定的软件许可证。
+
+
 本仓库的原创应用代码未授予公共开源许可。package.json 中的 UNLICENSED 表示未授权公共使用，并不覆盖或撤销第三方权利。
 
 - OpenStreetMap 地理数据库及相关衍生数据：ODbL 1.0，https://www.openstreetmap.org/copyright 。本地底图数据与图片中的相关来源、许可标识保留。

@@ -2,6 +2,8 @@
 
 简体中文 | [English](README.en.md)
 
+作者：[masterkey7](https://github.com/masterkey7) · [小红书主页](https://xhslink.cn/o/e1lBruaQG5) · [项目来源](https://github.com/masterkey7/site_analysis_tool) · [署名与权利说明](COPYRIGHT.md)
+
 **圈定场地，自动整理周边信息，微调后导出一张建筑分析图。**
 
 面向中国大陆建筑前期设计的本地地图工作台。把搜索定位、城市区位分析、图面风格和手动标注放在一个页面里完成。

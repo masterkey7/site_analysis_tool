@@ -2,6 +2,8 @@
 
 [简体中文](README.md) | English
 
+Created by [masterkey7](https://github.com/masterkey7) · [Xiaohongshu](https://xhslink.cn/o/e1lBruaQG5) · [Original repository](https://github.com/masterkey7/site_analysis_tool) · [Attribution and rights](COPYRIGHT.md)
+
 **Define a site, organize its surroundings, refine the annotations, and export an architectural analysis diagram.**
 
 A local map workspace for early-stage architectural design, primarily for projects in mainland China. Search, city-context analysis, map styles, and manual annotations come together on one page.
