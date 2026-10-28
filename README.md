@@ -108,4 +108,6 @@ SKILL.md               Agent 复用入口
 
 ## 许可与地图来源
 
-原创应用未授予公共开源许可，当前仓库用于私有研发保存。第三方依赖、地图数据及影像分别遵循其原有条款，见 [第三方说明](NOTICE.md) 和 [分发说明](docs/distribution.md)。私有上传不代表取得地图服务商业授权。
+本仓库中作者有权授权的原创应用代码与文档采用 [Apache License 2.0](LICENSE)，允许依条款使用、修改和商用。分发时须保留适用的版权、许可与 NOTICE，修改文件须注明修改；完整条件以 LICENSE 为准。
+
+作者与项目来源见 [COPYRIGHT.md](COPYRIGHT.md) 及 [NOTICE](NOTICE)。第三方依赖、地图数据库、随包地图数据与影像分别遵循其原有条款，见 [第三方说明](NOTICE.md) 和 [分发说明](docs/distribution.md)；Apache-2.0 不替代这些内容的授权。

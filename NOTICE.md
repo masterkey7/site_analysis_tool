@@ -11,10 +11,10 @@
 - 原始仓库：https://github.com/masterkey7/site_analysis_tool
 - 署名与权利说明：[COPYRIGHT.md](COPYRIGHT.md)
 
-本署名记录项目作者与来源，不把第三方代码、地图数据或影像声明为作者独有，也不授予尚未选定的软件许可证。
+本署名记录项目作者与来源，不把第三方代码、地图数据或影像声明为作者独有。标准分发声明见 [NOTICE](NOTICE)。
 
 
-本仓库的原创应用代码未授予公共开源许可。package.json 中的 UNLICENSED 表示未授权公共使用，并不覆盖或撤销第三方权利。
+作者有权授权的原创应用代码与文档采用 [Apache License 2.0](LICENSE)。本说明提供来源信息，不修改该许可证或增加额外限制，也不覆盖或撤销第三方权利。
 
 - OpenStreetMap 地理数据库及相关衍生数据：ODbL 1.0，https://www.openstreetmap.org/copyright 。本地底图数据与图片中的相关来源、许可标识保留。
 - 矢量地图服务与制图来源：OpenFreeMap、OpenMapTiles，详情见数据元信息与图面署名。

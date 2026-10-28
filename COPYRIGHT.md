@@ -12,14 +12,15 @@ Copyright (c) 2026 masterkey7.
 项目由 masterkey7 发起并主导需求、产品设计、建筑图面判断与迭代，使用 AI 辅助开发。
 The project is initiated and led by masterkey7, including requirements, product design, architectural diagram review, and iteration, with AI-assisted development.
 
-## 当前授权状态 / Current license status
+## 软件许可证 / Software license
 
-当前尚未选定并授予公共开源许可证；package.json 保留 UNLICENSED。本文件用于记录作者、项目来源与权利边界，不是 MIT、Apache 或其他软件许可的替代文本，也不因文件公开而新增使用、修改或再分发授权。适用法律、已有授权或第三方条款另有规定的除外。
+作者有权授权的原创应用代码与文档采用 [Apache License, Version 2.0](LICENSE)。你可以依照该许可证使用、复制、修改和商用；分发时须保留适用的版权、许可和 NOTICE，修改文件须标注修改。完整权利、条件、免责和责任限制以 LICENSE 英文原文为准。
 
-A public open-source license has not yet been selected or granted; package.json remains UNLICENSED. This file records attribution, project origin, and rights boundaries. It is not a replacement for MIT, Apache, or another software license, and publication of this notice does not itself grant additional rights to use, modify, or redistribute, except as provided by applicable law, existing permissions, or third-party terms.
+The original application code and documentation that the creator is entitled to license are licensed under the [Apache License, Version 2.0](LICENSE). Use, copying, modification, and commercial use are permitted subject to its terms. Redistribution must retain applicable copyright, license, and NOTICE information, and modified files must carry change notices. The full English LICENSE controls all permissions, conditions, disclaimers, and limitations.
 
-请在介绍本项目时注明原始项目与作者，避免把副本描述为自己独立创作的原版；这是一项署名请求，不替代最终许可证的具体条件。
-When describing this project, please identify its original source and creator, and avoid presenting a copy as your independently created original. This is an attribution request, not a replacement for the conditions of a future license.
+标准署名声明见 [NOTICE](NOTICE)。本文件用于记录项目作者与来源，不增加强制关注、界面推广或额外付费等许可条件，也不授予把作者姓名、品牌用于背书的权利。商标事项以 Apache-2.0 第6条为准。
+
+See [NOTICE](NOTICE) for the distribution attribution. This file records the creator and source without adding mandatory follows, UI promotion, or additional payments as license conditions. It does not grant an endorsement using the creator's name or brand; see section 6 of Apache-2.0 for trademark terms.
 
 ## 第三方内容 / Third-party materials
 

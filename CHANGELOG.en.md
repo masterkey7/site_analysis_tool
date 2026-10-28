@@ -4,6 +4,9 @@
 
 ## Unreleased
 
+- 2026-10-28: Adopted Apache-2.0, added standard LICENSE / NOTICE, and aligned bilingual licensing documentation and the creator page; third-party materials retain their terms.
+- Added creator attribution, Xiaohongshu links, and the project source page.
+
 - Added English documentation and two-way language links for the repository overview, agent instructions, workflow, architecture, validation, distribution, and third-party notices.
 - Documentation only: the Chinese application interface and v0.1.0 implementation remain unchanged. The existing v0.1.0 tag is preserved.
 

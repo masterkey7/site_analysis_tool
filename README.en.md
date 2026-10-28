@@ -109,4 +109,6 @@ SKILL.md               Agent entry point, with an English companion
 
 ## Rights and map sources
 
-The original application has not been released under a public open-source license. This repository is for private development. Third-party dependencies, map data, and imagery retain their own terms; see [Third-party notices](NOTICE.en.md) and [Distribution boundaries](docs/distribution.en.md). A private upload does not establish commercial authorization for map services.
+The original application code and documentation that the creator is entitled to license are licensed under the [Apache License 2.0](LICENSE), permitting use, modification, and commercial use under its terms. Redistribution must retain applicable copyright, license, and NOTICE information; modified files must state that they were changed. The complete LICENSE controls.
+
+See [COPYRIGHT.md](COPYRIGHT.md) and [NOTICE](NOTICE) for attribution. Third-party dependencies, geographic databases, bundled map data, and imagery retain their own terms; see [Third-party notices](NOTICE.en.md) and [Distribution boundaries](docs/distribution.en.md). Apache-2.0 does not replace their permissions.

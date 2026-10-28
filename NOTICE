@@ -1,0 +1,25 @@
+Site Analysis Tool / 场地分析工具
+Copyright (c) 2026 masterkey7.
+
+Original repository: https://github.com/masterkey7/site_analysis_tool
+Creator: https://github.com/masterkey7
+Xiaohongshu: https://xhslink.cn/o/e1lBruaQG5
+
+Requirements, product design, architectural diagram review, and iteration
+are led by masterkey7, with AI-assisted development.
+
+Original application code and documentation that the creator is entitled
+to license are licensed under the Apache License, Version 2.0.
+See LICENSE. This NOTICE is informational and does not amend the license.
+
+Third-party code, dependencies, map data, and imagery retain their own
+licenses and attribution; they are not relicensed by this notice.
+
+Map data and related derived data: OpenStreetMap contributors, ODbL 1.0.
+https://www.openstreetmap.org/copyright
+Vector map services and cartographic sources: OpenFreeMap / OpenMapTiles.
+AMap APIs, SDK, place data, boundaries, and imagery retain provider terms.
+coordtransform and html2canvas retain their licenses in vendor/.
+npm dependencies retain the licenses distributed with their packages.
+
+See NOTICE.md and NOTICE.en.md for additional third-party information.
